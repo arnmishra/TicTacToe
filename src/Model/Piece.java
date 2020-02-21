@@ -21,7 +21,7 @@ public class Piece {
     return this.team;
   }
 
-  public Team.TeamType getTeamType() {
+  public TeamType getTeamType() {
     return this.team.getTeamType();
   }
 

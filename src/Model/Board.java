@@ -1,10 +1,12 @@
 package Model;
 
+import java.util.List;
+
 public class Board {
   private int width; // Width of Board
   private int length; // Length of Board
-  private Team teamX = new Team(Team.TeamType.Xs); // Xs team
-  private Team teamO = new Team(Team.TeamType.Os); // Os team
+  private Team teamX = new Team(TeamType.Xs); // Xs team
+  private Team teamO = new Team(TeamType.Os); // Os team
   private Piece[][] positions; // Tracks the board and where each piece is
 
   /**
@@ -31,6 +33,19 @@ public class Board {
     return this.positions;
   }
 
+  public Team getTeam(TeamType teamType) {
+    if (teamType == TeamType.Os) {
+      return this.teamO;
+    } else {
+      return this.teamX;
+    }
+  }
+
+  private List<Piece> getTeamPieces(TeamType teamType) {
+    Team team = getTeam(teamType);
+    return team.getPieces();
+  }
+
   /**
    * Adds a new piece to the board. First checks that no piece already exists
    * at those coordinates.
@@ -42,5 +57,10 @@ public class Board {
     // TODO: Improve this assert check to be more detailed
     assert(positions[yCoordinate][xCoordinate] == null);
     positions[yCoordinate][xCoordinate] = piece;
+  }
+
+  public boolean isEndGame(TeamType teamType) {
+    List<Piece> teamPieces = getTeamPieces(teamType);
+
   }
 }

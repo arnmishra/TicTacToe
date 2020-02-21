@@ -4,11 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Team {
-  enum TeamType {
-    Xs,
-    Os
-  }
-
   private TeamType teamType; // X's team or O's team
   private String teamName; // Name of team
   private List<Piece> pieces = new ArrayList<Piece>(); // Pieces played so far

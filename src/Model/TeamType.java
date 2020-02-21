@@ -1,9 +1,9 @@
 package Model;
 
 /**
- * The two types of teams: Xs team and Os team
+ * The two types of teams: X team and O team
  */
 public enum TeamType {
-  Xs,
-  Os
+  X,
+  O
 }

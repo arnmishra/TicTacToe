@@ -7,7 +7,7 @@ public class Piece {
 
   /**
    * Constructor to create new Piece
-   * @param team: Whether this piece is on the Xs team or the Os team
+   * @param team: Whether this piece is on the X team or the O team
    * @param xCoordinate: X-Coordinate of Piece on board
    * @param yCoordinate: Y-Coordinate of Piece on board
    */

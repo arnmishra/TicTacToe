@@ -9,12 +9,11 @@ public class TeamTest {
   /**
    * Test to check the constructor by ensuring that a Team's teamType
    * is set properly.
-   * @throws Exception
    */
   @Test
   public void testValidConstructor() {
-    Team team = new Team(TeamType.Os);
-    assertEquals(team.getTeamType(), TeamType.Os);
+    Team team = new Team(TeamType.O);
+    assertEquals(team.getTeamType(), TeamType.O);
   }
 
   /**
@@ -22,7 +21,7 @@ public class TeamTest {
    */
   @Test
   public void teatSetTeamName() {
-    Team team = new Team(TeamType.Os);
+    Team team = new Team(TeamType.O);
     String teamName = "TestName";
     team.setTeamName(teamName);
     assertEquals(team.getTeamName(), teamName);

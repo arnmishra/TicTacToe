@@ -1,6 +1,8 @@
 package Controller;
 
 import Model.Board;
+import Model.Piece;
+import Model.TeamType;
 
 public class RunGame {
   /**
@@ -8,7 +10,10 @@ public class RunGame {
    * @param args: any arguments
    */
   public static void main(String args[]) {
-    Board board = new Board(3,3);
+    Board board = new Board(3);
+    Piece piece = new Piece(board.getTeam(TeamType.O), 0, 1);
+    board.addPieceToBoard(piece);
+    board.printBoard();
   }
 
 

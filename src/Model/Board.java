@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.Arrays;
+
 public class Board {
   private int dimension; // Dimension of Board (size Dimension x Dimension)
   private Team teamX = new Team(TeamType.X); // X team
@@ -17,6 +19,7 @@ public class Board {
     // TODO (not required): Allow 3rd dimension (or Nth dimension?)
     this.dimension = dimension;
     this.positions = new Piece[dimension][dimension];
+    fillPositions();
   }
 
   public int getDimension() {
@@ -43,8 +46,6 @@ public class Board {
   public void addPieceToBoard(Piece piece) {
     int xCoordinate = piece.getxCoordinate();
     int yCoordinate = piece.getyCoordinate();
-    // TODO: Improve this assert check to be more detailed
-    assert(positions[yCoordinate][xCoordinate] == null);
     positions[yCoordinate][xCoordinate] = piece;
   }
 
@@ -164,8 +165,8 @@ public class Board {
    */
   public void printBoard() {
     int i, j;
-    for (i = 0; i < dimension; i++) {
-      for (j = 0; j < dimension; j++) {
+    for (i = 0; i < this.dimension; i++) {
+      for (j = 0; j < this.dimension; j++) {
         Piece piece = this.positions[i][j];
         if (piece == null) {
           System.out.print("- ");
@@ -174,6 +175,16 @@ public class Board {
         }
       }
       System.out.print("\n");
+    }
+  }
+
+  private void fillPositions() {
+    int i, j;
+    Team emptyTeam = new Team(TeamType.N);
+    for (i = 0; i < this.dimension; i++) {
+      for (j = 0; j < this.dimension; j++) {
+        this.positions[i][j] = new Piece(emptyTeam, j, i);
+      }
     }
   }
 }

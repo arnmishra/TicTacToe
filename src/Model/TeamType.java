@@ -1,9 +1,18 @@
 package Model;
 
 /**
- * The two types of teams: X team and O team
+ * The two types of teams: X team and O team. N refers to an empty spot.
  */
 public enum TeamType {
   X,
-  O
+  O,
+  N;
+
+  public TeamType switchTeam() {
+    if (this == TeamType.X) {
+      return TeamType.O;
+    } else {
+      return TeamType.X;
+    }
+  }
 }

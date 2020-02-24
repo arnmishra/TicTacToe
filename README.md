@@ -11,8 +11,7 @@ Forfeit or Restart your game.
 You must have Java installed on your machine. Once you have cloned the
 repository, simply `cd TicTacToe/out/production/TicTacToe` and run
 `java Controller.RunGame`. This will open a Java Swing UI with the Tic-Tac-Toe
-game. Alternatively, you can load the code into Intellij and run the main
-function in RunGame.java.
+game.
 
 When starting the game, you have a few options. First, you must decide on the
 size of the board. If you plan to play against a computer, please choose a 3x3

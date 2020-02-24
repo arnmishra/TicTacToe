@@ -232,7 +232,7 @@ public class Gui implements ActionListener  {
       }
       String currentDirectory = System.getProperty("user.dir");
       BufferedImage pieceImage =
-        ImageIO.read(new File(currentDirectory + "/src/View/Pieces/" + image));
+        ImageIO.read(new File(currentDirectory + "/View/Pieces/" + image));
       Image scaledPiece =
         pieceImage.getScaledInstance(
           buttonDimension, buttonDimension, Image.SCALE_SMOOTH);

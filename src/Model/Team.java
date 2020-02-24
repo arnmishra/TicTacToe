@@ -1,12 +1,10 @@
 package Model;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Team {
   private TeamType teamType; // X's team or O's team
   private String teamName; // Name of team
-  private List<Piece> pieces = new ArrayList<Piece>(); // Pieces played so far
+  private int score = 0; // Number of times Team has won
   // TODO (not required): Track team moves in order to allow undo operations
 
   /**
@@ -29,11 +27,11 @@ public class Team {
     this.teamName = teamName;
   }
 
-  public List<Piece> getPieces() {
-    return this.pieces;
+  public int getScore() {
+    return this.score;
   }
 
-  public void addPiece(Piece piece) {
-    this.pieces.add(piece);
+  public void incrementTeamScore() {
+    this.score++;
   }
 }

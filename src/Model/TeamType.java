@@ -8,11 +8,17 @@ public enum TeamType {
   O,
   N;
 
+  /**
+   * Switch between X and O team enum
+   * @return Opposite team
+   */
   public TeamType switchTeam() {
     if (this == TeamType.X) {
       return TeamType.O;
-    } else {
+    } else if (this == TeamType.O) {
       return TeamType.X;
+    } else {
+      return TeamType.N;
     }
   }
 }

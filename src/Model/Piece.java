@@ -1,28 +1,24 @@
 package Model;
 
 public class Piece {
-  private Team team; // Which team this piece is on
+  private TeamType teamType; // Which team this piece is on
   private int xCoordinate; // X-Coordinate of Piece
   private int yCoordinate; // Y-Coordinate of Piece
 
   /**
    * Constructor to create new Piece
-   * @param team: Whether this piece is on the X team or the O team
+   * @param teamType: Whether this piece is on the X team or the O team
    * @param xCoordinate: X-Coordinate of Piece on board
    * @param yCoordinate: Y-Coordinate of Piece on board
    */
-  public Piece(Team team, int xCoordinate, int yCoordinate) {
-    this.team = team;
+  public Piece(TeamType teamType, int xCoordinate, int yCoordinate) {
+    this.teamType = teamType;
     this.xCoordinate = xCoordinate;
     this.yCoordinate = yCoordinate;
   }
 
-  public Team getTeam() {
-    return this.team;
-  }
-
   public TeamType getTeamType() {
-    return this.team.getTeamType();
+    return this.teamType;
   }
 
   public int getxCoordinate() {

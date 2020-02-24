@@ -47,4 +47,4 @@ ensure both teams don't have the same name, etc.
 All tests are under the "src/Tests" directory.
 
 ## Demo Game:
-[alt text](https://github.com/arnmishra/TicTacToe/raw/master/Demo.mov)
+[Download Game Demo](https://github.com/arnmishra/TicTacToe/raw/master/Demo.mov)
